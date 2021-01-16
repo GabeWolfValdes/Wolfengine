@@ -2,8 +2,9 @@
 
 // for use by wolfen applications
 
-#include <stdio.h>
 #include "Wolfen/Application.h"
+#include "Wolfen/Log.h"
+
 //
 
 

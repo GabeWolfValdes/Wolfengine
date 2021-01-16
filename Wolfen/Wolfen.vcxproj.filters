@@ -27,9 +27,15 @@
     <ClInclude Include="src\Wolfen\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolfen\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wolfen\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,3 @@
+[submodule "Wolfen/thirdParty/spdlog"]
+	path = Wolfen/thirdParty/spdlog
+	url = https://github.com/gabime/spdlog.git

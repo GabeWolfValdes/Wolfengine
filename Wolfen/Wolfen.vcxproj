@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Wolfen\Log.h" />
     <ClInclude Include="src\Wolfen.h" />
     <ClInclude Include="src\Wolfen\Application.h" />
     <ClInclude Include="src\Wolfen\Core.h" />
     <ClInclude Include="src\Wolfen\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Wolfen\Log.cpp" />
     <ClCompile Include="src\Wolfen\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -64,6 +66,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);WF_PLATFORM_WINDOWS;WF_BUILD_DLL</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Wolfen\thirdParty\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,6 +80,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);WF_PLATFORM_WINDOWS;WF_BUILD_DLL</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Wolfen\thirdParty\spdlog\include;</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

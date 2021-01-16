@@ -6,7 +6,9 @@ extern Wolfen::Application* Wolfen::CreateApplication();
 
 int main( int argc, char** argv )
 {
-	printf("Wolfen Application");
+	Wolfen::Log::Init();
+
+	WF_TRACE( "Welcome to WOLFENgine" );
 	auto app = Wolfen::CreateApplication();
 	app->Run();
 	delete app;
