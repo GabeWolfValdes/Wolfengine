@@ -26,7 +26,8 @@ project "Wolfen"
 
 	includedirs
 	{
-		"%{prj.name}/thirdparty/spdlog/include"
+		"%{prj.name}/thirdparty/spdlog/include",
+		"%{prj.name}/thirdparty/SuperString/include"
 	}
 
 	filter "system:windows"	
@@ -74,6 +75,7 @@ project "Sandbox"
 	includedirs
 	{
 		"Wolfen/thirdparty/spdlog/include",
+		"Wolfen/thirdparty/SuperString/include",
 		"Wolfen/src"
 	}
 

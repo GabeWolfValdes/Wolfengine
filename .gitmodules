@@ -1,3 +1,6 @@
 [submodule "Wolfen/thirdParty/spdlog"]
 	path = Wolfen/thirdParty/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "Wolfen/thirdParty/SuperString"]
+	path = Wolfen/thirdParty/SuperString
+	url = https://github.com/btwael/SuperString.git
