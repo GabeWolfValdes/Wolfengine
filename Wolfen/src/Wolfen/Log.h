@@ -1,11 +1,14 @@
 #pragma once
+
+#pragma warning( disable:4251 )
+
 #include "Core.h"
 #include "spdlog/spdlog.h"
-#include <memory>
+
 
 namespace Wolfen
 {
-	class WOLFEN_API Log
+	class Log
 	{
 	public:
 		Log();

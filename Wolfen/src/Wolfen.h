@@ -3,7 +3,7 @@
 // for use by wolfen applications
 
 #include "Wolfen/Application.h"
-#include "Wolfen/Log.h"
+#include "SuperString.hh"
 
 //
 

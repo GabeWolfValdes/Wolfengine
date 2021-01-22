@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{DB5A0216-C712-4463-301A-1DBF1CF1DE53}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Wolfen">
       <UniqueIdentifier>{B06BE5DA-9C0D-10B1-85C8-230571099701}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wolfen\Platform">
+      <UniqueIdentifier>{04CE1FBA-7059-8D7E-796A-1073E574E97E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wolfen\Platform\Windows">
+      <UniqueIdentifier>{3E3C0DE4-AA73-557B-B37D-B99E1F347C74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Containers\GName.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Containers\NameMap.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wolfen.h" />
     <ClInclude Include="src\Wolfen\Application.h">
       <Filter>Wolfen</Filter>
@@ -19,13 +34,27 @@
     <ClInclude Include="src\Wolfen\Log.h">
       <Filter>Wolfen</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolfen\Platform\Windows\WindowsWindow.h">
+      <Filter>Wolfen\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Window.h">
+      <Filter>Wolfen</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wfpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Containers\NameMap.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
     <ClCompile Include="src\Wolfen\Application.cpp">
       <Filter>Wolfen</Filter>
     </ClCompile>
     <ClCompile Include="src\Wolfen\Log.cpp">
       <Filter>Wolfen</Filter>
     </ClCompile>
+    <ClCompile Include="src\Wolfen\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Wolfen\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wfpch.cpp" />
   </ItemGroup>
 </Project>

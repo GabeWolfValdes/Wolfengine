@@ -5,11 +5,9 @@ class Sandbox : public Wolfen::Application
 public:
 	Sandbox()
 	{
-
 	}
 	~Sandbox()
 	{
-
 	}
 };
 

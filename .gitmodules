@@ -4,3 +4,6 @@
 [submodule "Wolfen/thirdParty/SuperString"]
 	path = Wolfen/thirdParty/SuperString
 	url = https://github.com/btwael/SuperString.git
+[submodule "Wolfen/thirdParty/GLFW"]
+	path = Wolfen/thirdParty/GLFW
+	url = https://github.com/TheCherno/GLFW

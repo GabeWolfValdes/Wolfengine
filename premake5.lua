@@ -1,5 +1,6 @@
 workspace "Wolfen"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -10,13 +11,28 @@ workspace "Wolfen"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Wolfen/thirdParty/GLFW/include"
+IncludeDir["Glad"] = "Wolfen/thirdParty/Glad/include"
+IncludeDir["glm"] = "Wolfen/thirdParty/glm/include"
+
+include "Wolfen/thirdParty/GLFW"
+
 project "Wolfen"
 	location "Wolfen"
-	kind "SharedLib"
+	kind "StaticLib"
+	staticruntime "On"
+	systemversion = "latest"
 	language "C++"
+	
+
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "wfpch.h"
+	pchsource "Wolfen/src/wfpch.cpp"
 
 	files
 	{
@@ -26,43 +42,58 @@ project "Wolfen"
 
 	includedirs
 	{
-		"%{prj.name}/thirdparty/spdlog/include",
-		"%{prj.name}/thirdparty/SuperString/include"
+		"%{prj.name}/src",
+		"%{prj.name}/thirdParty/spdlog/include",
+		"%{prj.name}/thirdParty/SuperString/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	filter "system:windows"	
-		staticruntime "On"
-		systemversion = "latest"
-
 		defines
 		{
 			"WF_PLATFORM_WINDOWS",
-			"WF_BUILD_DLL"
+			"WF_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "WF_DEBUG"
 		symbols "On"
+		runtime "Debug"
 
 	filter "configurations:Release"
 		defines "WF_RELEASE"
 		optimize "On"
+		runtime "Release"
 
 	filter "configurations:Dist"
 		defines "WF_DIST" 
 		optimize "On"
+		runtime "Release"
 
 project "Sandbox"
 
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
-
+	cppdialect "C++latest"
+	staticruntime "on"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -74,9 +105,10 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Wolfen/thirdparty/spdlog/include",
-		"Wolfen/thirdparty/SuperString/include",
-		"Wolfen/src"
+		"Wolfen/thirdParty/spdlog/include",
+		"Wolfen/thirdParty/SuperString/include",
+		"Wolfen/src",
+		"Wolfen/thirdParty"
 	}
 
 	links
@@ -85,8 +117,7 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		staticruntime "On"
-		systemversion = "latest"
+	systemversion = "latest"
 
 		defines
 		{
