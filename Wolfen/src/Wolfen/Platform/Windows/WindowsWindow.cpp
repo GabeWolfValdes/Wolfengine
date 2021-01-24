@@ -1,10 +1,11 @@
 #include "wfpch.h"
 
 #include "WindowsWindow.h"
+#include "Wolfen/Renderer/OpenGL/OpenGLContext.h"
 
 namespace Wolfen
 {
-	static bool s_GLFInitialized = false;
+	static bool s_bGraphicsInitialized = false;
 
 	WindowsWindow::WindowsWindow( const WindowProps& props )
 	{
@@ -30,34 +31,44 @@ namespace Wolfen
 		WF_CORE_INFO( "Creating Window {0} ({1}, {2})", props.Title, props.Width, props.Height );
 	
 		
-		if( !s_GLFInitialized )
+		if( !s_bGraphicsInitialized )
 		{
 			//todo glfwTerminate on system shutdown
 			int success = glfwInit();
 			WF_CORE_ASSERT( success, "Could not initialize GLFW!" );
 
-			s_GLFInitialized = true;
+			s_bGraphicsInitialized = true;
 		}
 		
+		// todo abstract
 		m_Window = glfwCreateWindow( (int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr );
-		glfwMakeContextCurrent(m_Window);
+		
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init();
+
+		// todo abstract
 		glfwSetWindowUserPointer( m_Window, &m_Data );
+
 		SetVSync( true );
 	}
 
 	void WindowsWindow::Shutdown()
 	{
+		// todo abstract
 		glfwDestroyWindow(m_Window);
 	}
 
 	void WindowsWindow::OnUpdate()
 	{
+		// todo abstract to window update
 		glfwPollEvents();
-		glfwSwapBuffers( m_Window );
+
+		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync( bool enabled )
 	{
+		// todo abstract
 		if( enabled )
 			glfwSwapInterval( 1 );
 		else

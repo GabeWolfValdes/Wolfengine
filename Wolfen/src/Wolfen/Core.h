@@ -31,4 +31,4 @@
 #define BIT(x) (1 << x) 
 
 // for event system
-#define HZ_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+#define WF_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

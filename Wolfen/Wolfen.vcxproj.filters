@@ -7,6 +7,9 @@
     <Filter Include="Wolfen">
       <UniqueIdentifier>{B06BE5DA-9C0D-10B1-85C8-230571099701}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wolfen\Events">
+      <UniqueIdentifier>{9411F7C3-00D2-72FA-C90C-BC77358CB7D6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Wolfen\Platform">
       <UniqueIdentifier>{04CE1FBA-7059-8D7E-796A-1073E574E97E}</UniqueIdentifier>
     </Filter>
@@ -31,6 +34,18 @@
     <ClInclude Include="src\Wolfen\EntryPoint.h">
       <Filter>Wolfen</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolfen\Events\ApplicationEvent.h">
+      <Filter>Wolfen\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Events\Event.h">
+      <Filter>Wolfen\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Events\KeyEvent.h">
+      <Filter>Wolfen\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Events\MouseEvent.h">
+      <Filter>Wolfen\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wolfen\Log.h">
       <Filter>Wolfen</Filter>
     </ClInclude>
@@ -41,10 +56,15 @@
       <Filter>Wolfen</Filter>
     </ClInclude>
     <ClInclude Include="src\wfpch.h" />
-    <ClInclude Include="src\Wolfen\Events\Event.h" />
-    <ClInclude Include="src\Wolfen\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Wolfen\Events\KeyEvent.h" />
-    <ClInclude Include="src\Wolfen\Events\MouseEvent.h" />
+    <ClInclude Include="src\Wolfen\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.h" />
+    <ClInclude Include="src\Wolfen\Renderer\RenderWindow.h" />
+    <ClInclude Include="src\Wolfen\Renderer\Shader.h" />
+    <ClInclude Include="src\Wolfen\File.h" />
+    <ClInclude Include="src\Wolfen\Renderer\Buffer.h" />
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Wolfen\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Containers\NameMap.cpp">
@@ -60,5 +80,12 @@
       <Filter>Wolfen\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\wfpch.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Wolfen\File.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Wolfen\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

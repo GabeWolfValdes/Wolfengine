@@ -2,6 +2,7 @@
 
 #include "wfpch.h"
 #include "Wolfen/Core.h"
+#include "Wolfen/Events/Event.h"
 
 // interface for platform specific windows
 namespace Wolfen
@@ -23,13 +24,17 @@ namespace Wolfen
 	class Window
 	{
 	public:
-		virtual ~Window() {}
 
+		using EventCallbackFn = std::function<void(Event&)>;
+
+		virtual ~Window() {}
 		virtual void OnUpdate() = 0;
 
 		virtual unsigned int GetWidth() const = 0;
 		virtual unsigned int GetHeight() const = 0;
-
+		
+		//Window attribs
+		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync( bool enabled ) = 0;
 		virtual bool IsVSync() const = 0;
 

@@ -19,5 +19,6 @@
 #include "Wolfen/Log.h"
 
 #ifdef WF_PLATFORM_WINDOWS
-	#include <Windows.h>
+	#include <Windows.h>	
+	//#include <stdint.h>
 #endif // WF_PLATFORM_WINDOWS

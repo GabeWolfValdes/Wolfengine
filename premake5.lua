@@ -18,6 +18,7 @@ IncludeDir["Glad"] = "Wolfen/thirdParty/Glad/include"
 IncludeDir["glm"] = "Wolfen/thirdParty/glm/include"
 
 include "Wolfen/thirdParty/GLFW"
+include "Wolfen/thirdParty/Glad"
 
 project "Wolfen"
 	location "Wolfen"
@@ -25,8 +26,6 @@ project "Wolfen"
 	staticruntime "On"
 	systemversion = "latest"
 	language "C++"
-	
-
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -45,11 +44,13 @@ project "Wolfen"
 		"%{prj.name}/src",
 		"%{prj.name}/thirdParty/spdlog/include",
 		"%{prj.name}/thirdParty/SuperString/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
+		"Glad",
 		"GLFW",
 		"opengl32.lib"
 	}
@@ -67,10 +68,10 @@ project "Wolfen"
 			"GLFW_INCLUDE_NONE"
 		}
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-		}
+		--postbuildcommands
+		--{
+		--	("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
+		--}
 
 	filter "configurations:Debug"
 		defines "WF_DEBUG"
