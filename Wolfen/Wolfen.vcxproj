@@ -151,6 +151,10 @@
     <ClInclude Include="src\Wolfen\Application.h" />
     <ClInclude Include="src\Wolfen\Core.h" />
     <ClInclude Include="src\Wolfen\EntryPoint.h" />
+    <ClInclude Include="src\Wolfen\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Wolfen\Events\Event.h" />
+    <ClInclude Include="src\Wolfen\Events\KeyEvent.h" />
+    <ClInclude Include="src\Wolfen\Events\MouseEvent.h" />
     <ClInclude Include="src\Wolfen\Log.h" />
     <ClInclude Include="src\Wolfen\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Wolfen\Window.h" />

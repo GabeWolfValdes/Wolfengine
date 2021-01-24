@@ -41,6 +41,10 @@
       <Filter>Wolfen</Filter>
     </ClInclude>
     <ClInclude Include="src\wfpch.h" />
+    <ClInclude Include="src\Wolfen\Events\Event.h" />
+    <ClInclude Include="src\Wolfen\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Wolfen\Events\KeyEvent.h" />
+    <ClInclude Include="src\Wolfen\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Containers\NameMap.cpp">
