@@ -32,3 +32,6 @@
 
 // for event system
 #define WF_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+
+// for using enums as strings for shaders? todo better way to do this?
+#define mkstr(s) #s 

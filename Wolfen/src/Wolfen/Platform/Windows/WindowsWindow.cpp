@@ -7,6 +7,12 @@ namespace Wolfen
 {
 	static bool s_bGraphicsInitialized = false;
 
+	static void GLFWErrorCallback( int error, const char* description )
+	{
+		WF_CORE_ERROR( "GLFW Error ({0}): {1}", error, description );
+		WF_CORE_ASSERT( false, "GLFW error hit!" );
+	}
+
 	WindowsWindow::WindowsWindow( const WindowProps& props )
 	{
 		Init( props );
@@ -36,6 +42,7 @@ namespace Wolfen
 			//todo glfwTerminate on system shutdown
 			int success = glfwInit();
 			WF_CORE_ASSERT( success, "Could not initialize GLFW!" );
+			glfwSetErrorCallback( GLFWErrorCallback );
 
 			s_bGraphicsInitialized = true;
 		}
