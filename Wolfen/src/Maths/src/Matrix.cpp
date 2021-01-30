@@ -8,11 +8,10 @@
 // Gam 475
 //----------------------------------------------------------------------------- 
 
+#include "wfpch.h"
+
 #include <math.h>
-
-#include "MathEngine.h"
-
-// Do your magic here
+#include "Maths/include/MathEngine.h"
 
 // ---  End of File ---------------
 

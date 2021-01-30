@@ -1,13 +1,8 @@
-//-----------------------------------------------------------------------------
-// Copyright Ed Keenan 2019
-// Gam575
-//----------------------------------------------------------------------------- 
+#include "wfpch.h"
 
 #include <math.h>
 
-#include "MathEngine.h"
-
-// Do your magic here
+#include "Maths/include/MathEngine.h"
 
 //setters
 float Vect::operator[](x_enum) const

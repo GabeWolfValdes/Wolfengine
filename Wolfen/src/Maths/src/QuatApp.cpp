@@ -2,9 +2,10 @@
 // Copyright Ed Keenan 2019
 // Gam575
 //----------------------------------------------------------------------------- 
+#include "wfpch.h"
 
-#include "MathEngine.h"
-#include "MathApp.h"
+#include "Maths/include/MathEngine.h"
+#include "Maths/include/MathApp.h"
 #include <math.h>
 
 //----------------------------------------------------------------------------- 

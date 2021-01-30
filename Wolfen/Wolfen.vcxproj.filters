@@ -4,6 +4,18 @@
     <Filter Include="Containers">
       <UniqueIdentifier>{DB5A0216-C712-4463-301A-1DBF1CF1DE53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{028BA70D-6E9F-CFBE-3721-731EA3F4CBEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths\include">
+      <UniqueIdentifier>{75948839-E154-0470-AA8F-4DED160F494C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths\src">
+      <UniqueIdentifier>{19FAB45C-8564-69D3-CEA2-1A793A4C4728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModelConverter">
+      <UniqueIdentifier>{8E834DD5-7A51-41DB-63E5-B1014F521D40}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Wolfen">
       <UniqueIdentifier>{B06BE5DA-9C0D-10B1-85C8-230571099701}</UniqueIdentifier>
     </Filter>
@@ -16,6 +28,12 @@
     <Filter Include="Wolfen\Platform\Windows">
       <UniqueIdentifier>{3E3C0DE4-AA73-557B-B37D-B99E1F347C74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wolfen\Renderer">
+      <UniqueIdentifier>{56D5FC94-C260-6A59-CB71-ED4D377CC659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wolfen\Renderer\OpenGL">
+      <UniqueIdentifier>{CA6115A8-B65B-3EFA-9FC8-D40A8B61A466}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Containers\GName.h">
@@ -23,6 +41,54 @@
     </ClInclude>
     <ClInclude Include="src\Containers\NameMap.h">
       <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Align16.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Constants.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Enum.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\MathApp.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\MathEngine.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Matrix.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Quat.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\QuatApp.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Util.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\Vect.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\include\VectApp.h">
+      <Filter>Maths\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelConverter\ChunkHeader.h">
+      <Filter>ModelConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelConverter\ModelFileHeader.h">
+      <Filter>ModelConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelConverter\PackageHeader.h">
+      <Filter>ModelConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelConverter\eat.h">
+      <Filter>ModelConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelConverter\md5.h">
+      <Filter>ModelConverter</Filter>
     </ClInclude>
     <ClInclude Include="src\Wolfen.h" />
     <ClInclude Include="src\Wolfen\Application.h">
@@ -46,31 +112,82 @@
     <ClInclude Include="src\Wolfen\Events\MouseEvent.h">
       <Filter>Wolfen\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolfen\File.h">
+      <Filter>Wolfen</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wolfen\Log.h">
       <Filter>Wolfen</Filter>
     </ClInclude>
     <ClInclude Include="src\Wolfen\Platform\Windows\WindowsWindow.h">
       <Filter>Wolfen\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\Buffer.h">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\GraphicsContext.h">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.h">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.h">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.h">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\RenderWindow.h">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\Renderer.h">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wolfen\Renderer\Shader.h">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wolfen\Window.h">
       <Filter>Wolfen</Filter>
     </ClInclude>
     <ClInclude Include="src\wfpch.h" />
-    <ClInclude Include="src\Wolfen\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.h" />
-    <ClInclude Include="src\Wolfen\Renderer\RenderWindow.h" />
-    <ClInclude Include="src\Wolfen\Renderer\Shader.h" />
-    <ClInclude Include="src\Wolfen\File.h" />
-    <ClInclude Include="src\Wolfen\Renderer\Buffer.h" />
-    <ClInclude Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Wolfen\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Containers\NameMap.cpp">
       <Filter>Containers</Filter>
     </ClCompile>
+    <ClCompile Include="src\Maths\src\Matrix.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\src\Quat.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\src\QuatApp.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\src\Util.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\src\Vect.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\src\VectApp.cpp">
+      <Filter>Maths\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelConverter\eat.cpp">
+      <Filter>ModelConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelConverter\liu.cpp">
+      <Filter>ModelConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelConverter\md5.cpp">
+      <Filter>ModelConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelConverter\vodka.cpp">
+      <Filter>ModelConverter</Filter>
+    </ClCompile>
     <ClCompile Include="src\Wolfen\Application.cpp">
+      <Filter>Wolfen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\File.cpp">
       <Filter>Wolfen</Filter>
     </ClCompile>
     <ClCompile Include="src\Wolfen\Log.cpp">
@@ -79,13 +196,24 @@
     <ClCompile Include="src\Wolfen\Platform\Windows\WindowsWindow.cpp">
       <Filter>Wolfen\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\Buffer.cpp">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.cpp">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.cpp">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.cpp">
+      <Filter>Wolfen\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\Renderer.cpp">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wolfen\Renderer\Shader.cpp">
+      <Filter>Wolfen\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\wfpch.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLWindow.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Wolfen\File.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Wolfen\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

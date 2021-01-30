@@ -1,9 +1,5 @@
-//-----------------------------------------------------------------------------
-// Copyright Ed Keenan 2019
-// Gam575
-//----------------------------------------------------------------------------- 
-
-#include "Util.h"
+#include "wfpch.h"
+#include "Maths/include/Util.h"
 
 bool Util::isEqual(const float a, const float b, const float epsilon)
 {

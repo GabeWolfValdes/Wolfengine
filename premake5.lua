@@ -16,9 +16,12 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Wolfen/thirdParty/GLFW/include"
 IncludeDir["Glad"] = "Wolfen/thirdParty/Glad/include"
 IncludeDir["glm"] = "Wolfen/thirdParty/glm/include"
+--IncludeDir["maths"] = "Wolfen/src/Maths/" dont think i need this one
+--IncludeDir["fbx"] = "Wolfen/thirdParty/Fbx_ImportScene"
 
 include "Wolfen/thirdParty/GLFW"
 include "Wolfen/thirdParty/Glad"
+include "Wolfen/thirdParty/Fbx_ImportScene"
 
 project "Wolfen"
 	location "Wolfen"
@@ -45,7 +48,8 @@ project "Wolfen"
 		"%{prj.name}/thirdParty/spdlog/include",
 		"%{prj.name}/thirdParty/SuperString/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}"--,
+		--"%{IncludeDir.fbx}"
 	}
 
 	links
