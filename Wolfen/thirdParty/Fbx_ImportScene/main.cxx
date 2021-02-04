@@ -19,7 +19,7 @@
 //
 /////////////////////////////////////////////////////////////////////////
 
-#include "../Common/Common.h"
+#include "Common.h"
 #include "DisplayCommon.h"
 #include "DisplayHierarchy.h"
 #include "DisplayAnimation.h"
